@@ -1,0 +1,52 @@
+ENTIDADES:
+
+MATCH
+Entidad principal que representa cada partido.
+
+Attributes:
+match_id (PK)
+date
+home_team (FK)
+away_team (FK)
+venue (FK)
+referee (FK)
+home_possession
+away_possession
+home_shots_on_target_pct
+away_shots_on_target_pct
+home_saves_pct
+away_saves_pct
+result
+winner
+
+TEAM
+
+Attributes:
+team_name (PK)
+
+VENUE
+
+Attributes:
+venue_name (PK)
+
+REFEREE
+
+Attributes:
+referee_name (PK)
+
+RELACIONES:
+
+TEAM — MATCH
+
+Un partido tiene dos equipos (home y away).
+Cardinality: 1 : N
+
+VENUE — MATCH
+
+Un partido se juega en un estadio.
+Cardinality: 1 : N
+
+REFEREE — MATCH
+
+Un partido tiene un árbitro.
+Cardinality: 1 : N
